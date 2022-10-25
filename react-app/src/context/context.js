@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { createContext, useState } from 'react';
 import jwtDecode from 'jwt-decode'
+import { apiUrl } from '../services/api';
 
 export const AuthContext = createContext()
 
@@ -38,6 +39,19 @@ export const AuthContextProvider = ({ children }) => {
     }
   }
 
+//   const getLeaves =async  () =>{
+//       try {
+//         let tokenData = JSON.parse(localStorage.getItem('token'));
+//          console.log(tokenData)
+//         let header = {
+//           "Authorization": `Bearer ${tokenData.accesstoken}`
+//         }
+//       const res = await axios.get(`${apiUrl}/api/leaves`, {
+//         headers: header
+//       })
+//       console.log(res.data)    
+//       } catch (error) { console.log(error)}
+// }
 
   return (
     <AuthContext.Provider value={{ login, register }}>

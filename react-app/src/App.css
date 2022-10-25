@@ -91,7 +91,7 @@ a{
 .nav .navlinks{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 .navlinks li{
     list-style: none;
@@ -222,14 +222,21 @@ input[type="date"] {
     flex-direction: column;
     justify-content: center;
 }
+.calenderInnner{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
 .react-calendar {
-    width: 350px;
+    width: 350px !important;
+    height: 320px !important;
     max-width: 100%;
-    background: white;
-    border: 1px solid #a0a096;
+    background: rgb(199, 196, 196);
+    /* border: 1px solid #a0a096 !important; */
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
+    box-shadow: 0px 2px 6px -1px rgba(156,150,156,1);
   }
   .react-calendar--doubleView {
     width: 700px;
